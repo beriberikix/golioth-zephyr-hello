@@ -13,6 +13,20 @@ Requirements
 - Golioth credentials
 - Network connectivity
 
+How to check out this repo
+**************************
+
+.. code-block:: console
+
+    python3 -m venv ~/golioth-zephyr-hello/.venv
+    source ~/golioth-zephyr-hello/.venv/bin/activate
+    pip install west
+    west init -m git@github.com:beriberikix/golioth-zephyr-hello-standalone.git ~/golioth-zephyr-hello
+    cd ~/golioth-zephyr-hello
+    west update
+    west zephyr-export
+    pip install -r ~/golioth-zephyr-hello/zephyr/scripts/requirements.txt
+
 Building and Running
 ********************
 
