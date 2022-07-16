@@ -10,7 +10,15 @@ manifest:
     - name: zephyr
       remote: zephyrproject-rtos
       revision: main
-      import: true
+      import:
+        name-allowlist:
+          - cmsis
+          - hal_espressif
+          - hal_nordic
+          - mbedtls
+          - net-tools
+          - segger
+          - tinycrypt
 
     - name: golioth
       path: modules/lib/golioth
